@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+.main-page {
+  background-image: url("../public/background.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ticket-revenue,
+.total-ticket {
+  background: rgba(108, 107, 107, 0.263);
+  border-radius: 10px 61px 10px 10px;
+  clip-path: polygon(0% 0%, 84% 0%, 100% 18%, 100% 100%, 0% 100%);
+}
+
+.row2 {
+  width: 100%;
+  height: 20rem;
+  background: rgba(108, 107, 107, 0.263);
+  border-radius: 10px 50px 10px 10px;
+  clip-path: polygon(0% 0%, 95% 0%, 100% 15%, 100% 100%, 0% 100%);
+  border: 1px solid rgb(95, 94, 94);
+}
+button {
+  cursor: pointer;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
