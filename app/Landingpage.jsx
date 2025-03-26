@@ -2,19 +2,18 @@ import React from "react";
 import TicketRavenue from './components/TicketRavenue';
 import TotalTickets from './components/TotalTickets';
 import { poppins } from './components/Font';
-import Navbar from './components/Navbar';
+import { FaPlus } from "react-icons/fa";
 const Landingpage = () => {
   return (
-    <div className=" flex flex-col gap-6 w-full h-screen  ">
-      <Navbar/>
-      {/* <MyAreaChart/> */}
-      <div className="row1 text-white h-fit  flex flex-col lg:flex-row  items-center  px-4 ">
-        <div className="details h-[10rem]  relative ">
+    <div className=" flex flex-col gap-6 w-full min-h-screen   ">
+      <div className="row1 text-white h-fit  flex flex-col lg:flex-row  items-center  px-4 gap-2">
+        <div className="details h-fit  flex flex-col sm:items-end ">
           <h1 className={`${poppins.className} text-2xl mb-4 italic mt-2 font-[900]  md:text-[5vw] capitalize `}>
             manage your ticket
           </h1>
-          <button className={`${poppins.className} capitalize italic font-[600]  bg-amber-300 md:absolute bottom-4 right-15 text-black rounded-4xl px-10 py-2`}>
+          <button className={`${poppins.className} text-[12px] md:text-lg  w-fit flex gap-1 items-center capitalize italic font-[600]  bg-amber-300  text-black rounded-4xl px-7 py-2`}>
             create new ticket
+            <FaPlus className='text-sm' />
           </button>
         </div>
         <div className="card-containe  mt-4 flex  gap-6 flex-col md:flex-row">
@@ -24,10 +23,10 @@ const Landingpage = () => {
         </div>
       </div>
       <div className="row2 p-2 ">
-        <div className="header text-white flex items-center gap-4">
-          <div>
-            <h1 className="text-sm md:text-xl">Available Tickets</h1>
-            <p className="capitalize font-light text-sm">
+        <div className="header text-white flex flex-col sm:flex-row  items-center gap-4">
+          <div className='flex sm:block text-[12px] md:text-lg lg:text-xl gap-2 justify-between'>
+            <h1 >Available Tickets</h1>
+            <p className="capitalize font-light ">
               sort by updated date
             </p>
           </div>

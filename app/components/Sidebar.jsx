@@ -12,7 +12,7 @@ import Image from 'next/image';
 import Link from "next/link";
 const Sidebar = () => {
   return (
-    <div className="h-[95vh]  w-[4rem]  border text-white border-gray-600 rounded-2xl flex flex-col justify-between items-center py-4  bg-white/10">
+    <div className="hidden  h-[95vh] w-[4rem]  border text-white border-gray-600 rounded-2xl md:flex flex-col justify-between items-center py-4  bg-white/10">
       <div>
         <MdArrowForwardIos className="text-lg font-light" />
       </div>

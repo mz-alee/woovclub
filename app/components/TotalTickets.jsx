@@ -7,7 +7,7 @@ const TotalTickets = () => {
         <h1 className="">total tickets</h1>
         <h1 className=" opacity-45 font-light">total Available tickets</h1>
       </div>
-      <div className="ticket-detail w-fullflex flex-col justify-between  items-center ">
+      <div className="ticket-detail w-full flex flex-col  h-50 py-4 justify-between items-center ">
         <h1 className="total-tickets text-[10vw] sm:text-[7vw] lg:text-[5vw] font-extrabold text-center ">124</h1>
         <div className='w-full  '>
           <div className="avail-tickets flex justify-between w-full py-2 border-b border-gray-400 ">
