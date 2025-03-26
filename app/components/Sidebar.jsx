@@ -12,35 +12,35 @@ import Image from 'next/image';
 import Link from "next/link";
 const Sidebar = () => {
   return (
-    <div className="hidden  h-[95vh] w-[4rem]  border text-white border-gray-600 rounded-2xl md:flex flex-col justify-between items-center py-4  bg-white/10">
+    <div className="hidden  h-[95vh] w-[4vw]  border text-white border-gray-600 rounded-[1vw] md:flex flex-col justify-between items-center py-[2vh]  bg-white/10">
       <div>
-        <MdArrowForwardIos className="text-lg font-light" />
+        <MdArrowForwardIos className="text-lg font-light md:w-[1.5vw] md:h-[3.5vh]" />
       </div>
-      <div className="links flex flex-col gap-6 text-lg md:text-2xl">
+      <div className="links flex flex-col gap-[4vh] text-lg ">
         <Link href='/'>
-        <Image src={icon1} alt='icon1'/>
+        <Image src={icon1} alt='icon1' className='md:w-[1.5vw] md:h-[3.5vh]'/>
         </Link>
         <Link href='/'>
-        <Image src={icon2} alt='icon2'/>
+        <Image src={icon2} alt='icon2'  className='md:w-[1.5vw] md:h-[3.5vh]'/>
         </Link>
         <Link href='/'>
-        <Image src={icon3} alt='icon3'/>
+        <Image src={icon3} alt='icon3'  className='md:w-[1.5vw] md:h-[3.5vh]'/>
         </Link>
         <Link href='/'>
-        <Image src={icon4} alt='icon4'/>
+        <Image src={icon4} alt='icon4' className='md:w-[1.5vw] md:h-[3.5vh]'/>
         </Link>
         <Link href='/'>
-        <Image src={icon5} alt='icon5'/>
+        <Image src={icon5} alt='icon5' className='md:w-[1.5vw] md:h-[3.5vh]'/>
         </Link>
         <Link href='/Ticketspage'>
-        <Image src={icon6} alt='icon6'/>
+        <Image src={icon6} alt='icon6' className='md:w-[1.5vw] md:h-[3.5vh]'/>
         </Link>
         <Link href='/'>
-        <Image src={icon7} alt='icon7'/>
+        <Image src={icon7} alt='icon7' className='md:w-[1.5vw] md:h-[3.5vh]'/>
         </Link>
       </div>
       <div>
-        <TbSettings2 />
+        <TbSettings2 className='md:w-[1.5vw] md:h-[3.5vh]'/>
       </div>
     </div>
   );

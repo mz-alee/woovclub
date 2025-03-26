@@ -5,11 +5,11 @@ import Landingpage from './Landingpage';
 
 const page = () => {
   return (
-    <div className="main-page overflow-hidden flex min-h-screen px-2 ">
+    <div className="main-page overflow-hidden flex min-h-screen px-[0.5vw] ">
       <div className='fixed h-screen flex items-center'>
         <Sidebar />
       </div>
-      <div className="w-full  md:ml-18 px-4 ">
+      <div className="w-full  md:ml-[4vw] px-[1.5vw] ">
         <Navbar/>
         <Landingpage/>
       </div>

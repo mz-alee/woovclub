@@ -5,16 +5,16 @@ import logo2 from "../../public/logo2.png";
 import { CiBellOn } from "react-icons/ci";
 const Navbar = () => {
   return (
-    <div className="border-b  border-gray-600 w-full h-[4rem] py-2 flex justify-between items-center">
+    <div className="border-b  border-gray-600 w-full h-[9vh] py-2 flex justify-between items-center">
       <div className="logo">
-        <Image src={logo} alt="logo" width={100} height={100}></Image>
+        <Image src={logo} alt="logo"  className='w-[12vw] h-[4vh] md:w-[8vw] md:h-[6vh]'></Image>
       </div>
       <div className='flex gap-2 items-center'>
-        <div className=" bell flex items-center justify-center   bg-white w-[3rem] h-[3rem] rounded-full">
-          <CiBellOn className='text-xl'/>
+        <div className=" bell flex items-center justify-center   bg-white w-[12vw] h-[4vh] md:w-[3vw] md:h-[6vh] rounded-full">
+          <CiBellOn className='w-[12vw] h-[4vh] md:w-[8vw] md:h-[4vh]'/>
         </div>
           <div>
-          <Image src={logo2} width={50} height={50} alt='logo' />
+          <Image src={logo2} className='w-[12vw] h-[4vh] md:w-[5vw] md:h-[6vh]' alt='logo' />
           </div>
       </div>
     </div>
