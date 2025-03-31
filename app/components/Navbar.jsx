@@ -5,7 +5,7 @@ import logo2 from "../../public/logo2.png";
 import { CiBellOn } from "react-icons/ci";
 const Navbar = () => {
   return (
-    <div className="border-b  border-gray-600 w-full h-[9vh] py-2 flex justify-between items-center">
+    <div className="border-b  border-gray-600 w-full h-[10vh] py-2 flex justify-between items-center">
       <div className="logo">
         <Image src={logo} alt="logo"  className='w-[12vw] h-[4vh] md:w-[8vw] md:h-[6vh]'></Image>
       </div>

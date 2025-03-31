@@ -1,8 +1,9 @@
 import React from "react";
 import MyAreaChart from "./Charts/Areachart";
+import BlueAreaChart from './Charts/BlueAreaChart';
 const TicketRavenue = () => {
   return (
-    <div className="ticket-revenue overflow-hidden h-[17rem] w-[70vw] sm:w-[60vw] md:w-[35vw] md:h-[25vh] lg:w-[25vw] lg:h-[35vh] relative flex  flex-col justify-between ">
+    <div className="rounded-[1vw] bg-white/10 overflow-hidden h-[17rem] w-[70vw] sm:w-[60vw] md:w-[35vw] md:h-[25vh] lg:w-[25vw] lg:h-[35vh] relative flex  flex-col justify-between ">
       <div className=" w-full px-2 pt-2 font-bold capitalize ">
         <h1 className="text-sm md:text-[1.3vw]">tickets ravenue</h1>
         <h1 className=" opacity-45 font-light text-sm md:text-[1.3vw]">
