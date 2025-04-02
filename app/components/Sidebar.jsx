@@ -52,7 +52,7 @@ const Sidebar = () => {
             className="md:w-[1.5vw] md:h-[3.5vh]"
           />
         </Link>
-        <Link href="/Ticketspage">
+        <Link href="/Ticketsdetail">
           <Image
             src={icon6}
             alt="icon6"

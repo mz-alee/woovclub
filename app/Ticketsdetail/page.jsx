@@ -13,12 +13,7 @@ import { useRouter } from 'next/navigation';
 const Ticketspage = () => {
   const router = useRouter({})
   return (
-    <div className="main-page overflow-hidden flex  min-h-screen  px-[1vw]  ">
-      <div className="fixed h-screen flex items-center">
-        <Sidebar />
-      </div>
-      <div className="w-full  md:ml-[5vw] px-[2vw]  ">
-        <Navbar />
+    
         <div className="ticket-page w-full h-full  text-white grid md:grid-cols-12">
           <div className="left-container h-full md:col-span-4   ">
             <div className="leftside md:w-[25vw]  h-full   flex flex-col items-center py-[0.5vh] gap-[1vw] ">
@@ -56,8 +51,6 @@ const Ticketspage = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
   );
 };
 

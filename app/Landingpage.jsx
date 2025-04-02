@@ -3,6 +3,7 @@ import TicketRavenue from "./components/TicketRavenue";
 import TotalTickets from "./components/TotalTickets";
 import { poppins } from "./components/Font";
 import { FaPlus } from "react-icons/fa";
+import Link from 'next/link';
 const Landingpage = () => {
   return (
     <div className=" main-page  flex flex-col min-h-[90vh] w-fit px-[1vw] gap-[2.5vh]  items-center justify-between py-[2vh] ">
@@ -13,12 +14,13 @@ const Landingpage = () => {
           >
             manage your ticket
           </h1>
-          <button
+          <Link
+          href='/createnewticket'
             className={`${poppins.className} text-[12px] md:text-[1.2vw]  w-fit flex gap-1 items-center capitalize italic font-[600]  bg-amber-300  text-black rounded-[2vw] px-[2vw] py-[0.9vh]`}
           >
             create new ticket
             <FaPlus className="text-sm md:text-[1vw]" />
-          </button>
+          </Link>
         </div>
         <div className="card-containe  mt-[2vh] flex  gap-[2vw] flex-col md:flex-row">
           <TicketRavenue />
@@ -59,7 +61,7 @@ const Landingpage = () => {
                 {[...Array(15)].map((_, index) => (
                   <tr
                     key={index}
-                    className="bg-white/10 text-[10px] md:text-lg lg:text-[1vw]  flex justify-between rounded-[2vw] px-[0.5vw] "
+                    className="bg-white/10 text-[10px] md:text-lg lg:text-[1vw]  flex justify-between rounded-[1vw] py-[1vh] px-[0.5vw] "
                   >
                     <td className="text-left   px-2 py-1 flex-1">
                       new football event

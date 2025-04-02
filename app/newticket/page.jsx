@@ -14,12 +14,7 @@ import Dropdown from "../components/Dropdown";
 const Ticketspage = () => {
   
   return (
-    <div className="main-page overflow-hidden flex  min-h-screen  px-[1vw]  ">
-      <div className="fixed h-screen flex items-center">
-        <Sidebar />
-      </div>
-      <div className="w-full  md:ml-[5vw] px-[2vw]  ">
-        <Navbar />
+    
         <div className="ticket-page w-full h-full  text-white grid md:grid-cols-12">
           <div className="left-container h-full md:col-span-4   ">
             <div className="leftside md:w-[25vw]  h-full   flex flex-col items-center py-[0.5vh] gap-[1vw] ">
@@ -99,7 +94,7 @@ const Ticketspage = () => {
                       href="/newticketpage2"
                       className={`${poppins.className} italic font-[600] bg-[#e5c839] text-[1.3vw] text-black rounded-[2vw] w-[6.5vw] px-[1vw] py-[1vh] flex items-center  gap-[0.3vw]`}
                     >
-                      Next{" "}
+                      Next
                       <span>
                         <RiArrowRightSLine />
                       </span>
@@ -110,8 +105,6 @@ const Ticketspage = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
   );
 };
 

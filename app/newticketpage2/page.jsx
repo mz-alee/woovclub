@@ -16,12 +16,7 @@ import football from "../../public/Footbal.png";
 import Dropdown from "../components/Dropdown";
 const Ticketspage = () => {
   return (
-    <div className="main-page overflow-hidden flex  min-h-screen  px-[1vw]  ">
-      <div className="fixed h-screen flex items-center">
-        <Sidebar />
-      </div>
-      <div className="w-full  md:ml-[5vw] px-[2vw]  ">
-        <Navbar />
+   
         <div className="ticket-page w-full h-full  text-white grid md:grid-cols-12">
           <div className="left-container h-full md:col-span-4   ">
             {/* left side container  */}
@@ -177,8 +172,7 @@ const Ticketspage = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+     
   );
 };
 
