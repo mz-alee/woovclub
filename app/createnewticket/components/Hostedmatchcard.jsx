@@ -6,7 +6,7 @@ import { poppins } from '../../components/Font';
 const Hostedmatchcard = () => {
   return (
     <div
-      className={`lr-cut-div hosted-match bg-white/10 w-[50vw] md:w-full h-[25vh]  md:h-[23vh] px-[1.5vw] py-[1vh] `}
+      className={`lr-cut-div hosted-match bg-white/10 w-full px-[1.5vw] py-[1vh] `}
     >
       <h1 className="text-[#e5c839] text-center text-sm md:text-[1.2vw]">
         Hosted Match
@@ -33,7 +33,7 @@ const Hostedmatchcard = () => {
           <div className="bg-white h-[50px] w-[50px]  lg:h-[7.5vh] lg:w-[3.5vw] flex justify-center items-center rounded-full">
             <Image
               src={AlHILALProfile}
-              alt='profile'
+              alt='profile1'
               className="w-fit h-fit md:w-[3vw] md:h-[6.5vh] object-center"
             />
           </div>

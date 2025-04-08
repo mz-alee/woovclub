@@ -13,7 +13,7 @@ export const roboto = Roboto({
 export const poppins = Poppins({
   subsets: ["latin"],
   style:['normal','italic'],
-  weight: ["300", "600", "900"],
+  weight: ["300","500","400", "600", "900"],
   variable: "--font-poppins",
 });
 export const lora = Lora({

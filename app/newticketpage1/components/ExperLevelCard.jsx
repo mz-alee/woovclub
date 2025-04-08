@@ -7,7 +7,7 @@ import person3 from '../../../public/person3.png'
 const ExperLevelCard = () => {
   return (
     <div
-      className={`expert-match bg-[#55299b] rounded-2xl w-[50vw] md:w-full min-h-[25vh] flex flex-col gap-[1vh]  md:min-h-[26vh] px-[1.5vw] py-[1vh] `}
+      className={`expert-match bg-[#55299b] rounded-2xl w-full md:w-full min-h-[25vh] flex flex-col gap-[1vh]  md:min-h-[26vh] px-[1.5vw] py-[1vh] `}
     >
       <h1 className={`${poppins.className} italic text-[#e5c839] font-[600]  text-sm md:text-[1vw]`}>Expert Level</h1>
       <div className="flex items-center  border-b border-gray-500 pb-[1vh] ">

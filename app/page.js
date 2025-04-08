@@ -1,12 +1,16 @@
 import React from "react";
-import Sidebar from "./components/Sidebar";
-import Navbar from "./components/Navbar";
 import Landingpage from './Landingpage';
-import Dashboard from './Pages/page';
+import Ticketsdata from './TicketsMap/Ticketsdata';
 const page = () => {
   return (
     <>
-    <Dashboard/>
+    <div >
+    <Landingpage/>
+    <div className='text-white '>
+    {/* <Ticketsdata/> */}
+    {/* <PaginatedList/> */}
+    </div>
+    </div>
     </>
   );
 };

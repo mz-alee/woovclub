@@ -1,10 +1,10 @@
 import React from "react";
-import MyAreaChart from "./Charts/Areachart";
-import BlueAreaChart from './Charts/BlueAreaChart';
+import MyAreaChart from "../charts/Areachart";
+import BlueAreaChart from "../charts/BlueAreaChart";
 
 const TotalRavenue = () => {
   return (
-    <div className="rounded-[1vw] bg-white/10 overflow-hidden text-sm md:text-[1vw] h-[30vh] w-[40vw] sm:w-[60vw] md:w-[35vw] md:h-[27vh] lg:w-[35vw] lg:h-[30vh] relative flex flex-col justify-between">
+    <div className="rounded-[1vw] bg-white/10 overflow-hidden text-sm md:text-[1vw] h-[30vh] w-full relative flex flex-col justify-between">
       <div className="w-full px-[1vw] pt-[1vh] font-bold capitalize">
         <h1 className="">ravenue</h1>
         <h1 className="opacity-45 font-light">
@@ -13,7 +13,7 @@ const TotalRavenue = () => {
       </div>
 
       <div className="w-full  h-[80%]">
-        <MyAreaChart /> 
+        <MyAreaChart />
         {/* <BlueAreaChart/> */}
       </div>
 

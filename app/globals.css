@@ -10,25 +10,24 @@
 .ticket-revenue,
 .total-ticket {
   background: rgba(108, 107, 107, 0.263);
-  border-radius:1.5vw 0px 1.5vw 1.5vw;
+  border-radius: 1.5vw 0px 1.5vw 1.5vw;
   clip-path: polygon(0% 0%, 84% 0%, 100% 18%, 100% 100%, 0% 100%);
 }
 
-.cutrow{
+.cutrow {
   border-radius: 10px 0px 10px 10px;
   clip-path: polygon(0% 0%, 95% 0%, 100% 15%, 100% 100%, 0% 100%);
   /* border: 1px solid rgb(95, 94, 94); */
 }
-.lr-cut-div{
+.lr-cut-div {
   clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
   border-radius: 0 0 2vw 2vw;
 }
 button {
   cursor: pointer;
 }
-.expert-match{
-  clip-path: polygon(0% 0%, 55% 0%, 100% 55%, 100% 100%, 0% 100%);
-
+.expert-match {
+  clip-path: polygon(0% 0%, 55% 0%, 100% 60%, 100% 100%, 0% 100%);
 }
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -38,12 +37,18 @@ button {
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
-.check-box{
+.check-box {
   color: blue;
   background-color: transparent;
   border-radius: 100%;
   border: 1px solid gray;
   padding: 2px 4px;
-  
+
   display: block;
+}
+
+
+/* for ticket map  */
+.left-section{
+  /* clip-path: polygon(20% 0%, 65% 26%, 66% 78%, 19% 100%); */
 }
