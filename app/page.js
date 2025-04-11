@@ -6,10 +6,6 @@ const page = () => {
     <>
     <div >
     <Landingpage/>
-    <div className='text-white '>
-    {/* <Ticketsdata/> */}
-    {/* <PaginatedList/> */}
-    </div>
     </div>
     </>
   );

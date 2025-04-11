@@ -3,7 +3,7 @@ import MyAreaChart from "../charts/Areachart";
 import BlueAreaChart from "../charts/BlueAreaChart";
 const TicketRavenue = () => {
   return (
-    <div className=" rounded-[1vw] bg-white/10 overflow-hidden h-[36vh] sm:h-[33vh] md:h-[25vh] lg:h-[33vh] w-full md:w-[30vw] lg:w-[25vw] relative flex  flex-col justify-between ">
+    <div className=" rounded-[1vw]  border border-[#484546] bg-gray-600/10 overflow-hidden h-[36vh] sm:h-[33vh] md:h-[30vh] lg:h-[35vh] w-full md:w-[30vw] lg:w-[22vw] relative flex  flex-col justify-between ">
       <div className=" w-full px-2 pt-2 font-bold capitalize ">
         <h1 className="text-sm md:text-[1.3vw]">tickets ravenue</h1>
         <h1 className=" opacity-45 font-light text-sm md:text-[1.3vw]">

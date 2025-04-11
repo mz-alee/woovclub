@@ -17,8 +17,15 @@
 .cutrow {
   border-radius: 10px 0px 10px 10px;
   clip-path: polygon(0% 0%, 95% 0%, 100% 15%, 100% 100%, 0% 100%);
-  /* border: 1px solid rgb(95, 94, 94); */
+  border: 1px solid rgb(95, 94, 94);
 }
+.shadow-text{
+  text-shadow: -6px 0 0 gray;
+}
+
+ 
+ 
+ 
 .lr-cut-div {
   clip-path: polygon(10% 0%, 90% 0%, 100% 25%, 100% 100%, 0% 100%, 0% 25%);
   border-radius: 0 0 2vw 2vw;
@@ -51,4 +58,15 @@ button {
 /* for ticket map  */
 .left-section{
   /* clip-path: polygon(20% 0%, 65% 26%, 66% 78%, 19% 100%); */
+}
+
+
+
+.dull-border-box {
+  padding: 20px;
+  background: white;
+  border-left: 2px solid white;
+  background-image: linear-gradient(to bottom, #e5c839 0%, rgba(229, 200, 57, 0.3) 20%, rgba(229, 200, 57, 0.3) 80%, #e5c839 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box; 
 }

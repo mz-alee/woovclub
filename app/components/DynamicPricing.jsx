@@ -2,7 +2,7 @@ import React from "react";
 
 const DynamicPricing = () => {
   return (
-    <div className=" h-[40vh] w-full overflow-hidden">
+    <div className=" border border-gray-600 rounded-xl h-[40vh] w-full overflow-hidden">
       <div className="px-[1vw] py-[1vh]">
         <h1 className="text-[10px] sm:text-[1vw] lg:text-[1.2vw]">
           Dynamic Pricing

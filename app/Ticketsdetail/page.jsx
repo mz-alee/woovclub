@@ -21,7 +21,7 @@ const Ticketspage = () => {
               onClick={() => {
                 router.push("/");
               }}
-              className={`${poppins.className} font-[600] bg-[#45b7db] w-fit h-[5vh] text-sm md:text-[1vw] flex items-center gap-[0.5vw] text-black rounded-2xl px-[1vw] py-[1vh]`}
+              className={`${poppins.className} font-[600] bg-[#45b7db] w-fit h-[5vh] text-sm md:text-[0.8vw] flex items-center gap-[0.5vw] text-black rounded-2xl px-[1vw] py-[1vh]`}
             >
               <MdOutlineKeyboardArrowLeft className="text-[2vw] font-light" />
               Tickets Management
@@ -44,12 +44,13 @@ const Ticketspage = () => {
       </div>
       <div className="scrollbar-hide w-full h-full  flex flex-col overflow-y-scroll items-center  md:col-span-8 py-[4vh] md:pt-[12vh]">
         <div className="box1   flex w-full flex-col sm:flex-row justify-between gap-2 my-[2vh] ">
-          <div className='w-full md:h-[30vh] lg:w-[25vw] lg:h-[30vh] '>
+        <div className="w-full md:h-[30vh] lg:w-[25vw] lg:h-[35vh]">
+          <Ticketdemand/>
+          </div>
+          <div className='w-full md:h-[30vh] lg:w-[35vw] lg:h-[35vh] '>
           <TotalRavenue />
           </div>
-          <div className="w-full md:h-[30vh] lg:w-[35vw] lg:h-[30vh]">
-          <TotalRavenue />
-          </div>
+          
         </div>
         <div className=" w-full rounded-[1vw] bg-white/10">
           <DynamicPricing />

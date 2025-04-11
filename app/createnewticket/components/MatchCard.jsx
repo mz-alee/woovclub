@@ -7,7 +7,7 @@ import person3 from '../../../public/person3.png'
 const MatchCard = ({ color }) => {
   return (
     <div
-      className={`cutrow hosted-match  w-full md:w-full h-[15vh] flex flex-col  justify-between sm:h-[20vh] md:h-[16vh] lg:h-[20vh] px-[1.5vw] py-[1vh]  `}
+      className={`cutrow hosted-match  w-full md:w-full h-[15vh] flex flex-col  justify-between sm:h-[20vh] md:h-[16vh] lg:h-[22vh] px-[1.5vw] py-[1vh]  `}
       style={{ backgroundColor: `${color}` }}
     >
       <div className="flex items-center justify-between border-b border-gray-500 ">

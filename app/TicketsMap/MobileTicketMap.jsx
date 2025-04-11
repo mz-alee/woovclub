@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { poppins } from "../components/Font";
 
 const MobileTicketMap = ({ data, categoryColors }) => {
-  console.log(data);
   
   const [currentPage, setCurrentPage] = useState(1);
   const [TicketLimit] = useState(25);

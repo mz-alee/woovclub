@@ -82,7 +82,6 @@ const DesktopTicketMap = ({ data, categoryColors }) => {
       pages.push("...");
       pages.push(totalPages);
     }
-    console.log("pages", pages);
 
     return pages;
   };

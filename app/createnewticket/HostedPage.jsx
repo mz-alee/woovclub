@@ -1,5 +1,5 @@
 "use client";
-import React, { useState,useEffect } from "react";
+import React, { useState } from "react";
 import { poppins } from "../components/Font";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
 import Link from "next/link";
@@ -8,9 +8,6 @@ import { useRouter } from 'next/navigation';
 import Footer from './components/Footer';
 import HostedLeftSide from './components/HostedLeftSide';
 import HostedRightSide from './components/HostedRightSide';
-import TicketSettingComponent from './components/TicketSettingComponent';
-import TicketSettingLeft from './components/TicketSettingLeft';
-import Page3RightSide from './components/Page3RightSide';
 const   ClubEventPage = ({togglebtn}) => {
   const [pageincrement,setpageincreament]=useState(1)
   const [number,setnumber]=useState(1)
@@ -20,9 +17,6 @@ const   ClubEventPage = ({togglebtn}) => {
     console.log(pageincrement);
     
   }
-  useEffect(() => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  }, [number]);
   return (
    
         <div className="ticket-page w-full   text-white grid md:grid-cols-12">
@@ -31,13 +25,13 @@ const   ClubEventPage = ({togglebtn}) => {
             <div className="leftside md:w-[25vw]  h-full   flex flex-col items-center py-[0.5vh] gap-[1vw] ">
               {/* header  */}
               <div className="header flex  w-full items-center gap-[1vw] py-[1vh] justify-between  ">
-                <button              disabled={number===1} onClick={()=>{setnumber(number-1)}}
-                
+                <Link
+                  href="/"
                   className={`${poppins.className} font-[600] bg-[#45b7db] w-fit h-[5vh] px-[0.7vw] text-sm md:text-[0.7vw] flex items-center gap-[0.5vw] text-black rounded-2xl py-[1vh]`}
                 >
                   <MdOutlineKeyboardArrowLeft className="text-[1.3vw] font-light" />
                   Tickets Management
-                </button>
+                </Link>
                 <h1
                   className={`${poppins.className} italic text-sm md:text-[1vw]`}
                 >
@@ -52,7 +46,7 @@ const   ClubEventPage = ({togglebtn}) => {
               </div>
               {/* left side content  */}
               <div className="w-full flex  h-[70vh] flex-col items-center gap-[1.5vw] border-r border-gray-600 pr-[2vw]">
-                {number===1?<HostedLeftSide/>:<TicketSettingLeft/>}
+                <HostedLeftSide/>
               </div>
             </div>
             
@@ -81,9 +75,7 @@ const   ClubEventPage = ({togglebtn}) => {
                 </div>
                 {/* right side content  */}
                 <div>
-                  {number===1 &&<HostedRightSide/>}
-                  {number===2 &&<TicketSettingComponent/>}
-                 {number===3&&<Page3RightSide/>}
+                  <HostedRightSide/>  
                 </div>
                 {/* footer  */}
                 <Footer handlepagenum={handlepagenum}  number={number}/>

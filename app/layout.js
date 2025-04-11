@@ -23,13 +23,12 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="main-page overflow-hidden flex min-h-screen px-[1vw] ">
-          <div className="fixed h-screen flex items-center">
+        <div className="main-page  flex h-screen  ">
+          <div className="h-screen  fixed flex items-center px-1">
             <Sidebar/>
           </div>
-          <div className="w-full  md:ml-[2vw] px-[3.5vw] ">
+          <div className="scrollbar-hide w-full overflow-y-scroll sm:pl-[8vw]  md:pl-[6vw] px-[4vw] md:pr-[2.5vw]   ">
             <Navbar/>
-            {/* <Landingpage /> */}
             {children}
           </div>
         </div>

@@ -5,8 +5,9 @@ import Image from "next/image";
 import { poppins } from "../../components/Font";
 const UpcomingMatchCard = ({ color }) => {
   return (
+  <div className='border-wrapper'>
     <div
-      className={`cutrow hosted-match  w-full md:w-full h-[20vh] flex flex-col  justify-between sm:h-[20vh] md:h-[18vh] lg:h-[25vh] px-[1.5vw] py-[1vh] `}
+      className={` rounded-lg border border-gray-600 hosted-match  w-full md:w-full h-[20vh] flex flex-col  justify-between sm:h-[20vh] md:h-[18vh] lg:h-[22vh] px-[1.5vw] py-[1vh] `}
       style={{ backgroundColor: `${color}` }}
     >
       <h1 className="text-[#e5c839]  text-[12px] md:text-[1vw]">
@@ -18,6 +19,7 @@ const UpcomingMatchCard = ({ color }) => {
             <Image
               src={SaudiProfile}
               className="w-fit h-fit md:w-[3vw] md:h-[6.5vh] object-center"
+              alt='profile'
             />
           </div>
           <h1 className="text-[10px] md:text-[1vw] uppercase">Saff</h1>
@@ -34,6 +36,8 @@ const UpcomingMatchCard = ({ color }) => {
             <Image
               src={AlHILALProfile}
               className="w-fit h-fit md:w-[3vw] md:h-[6.5vh] object-center"
+              alt='profile'
+
             />
           </div>
           <h1 className="text-[10px] md:text-[1vw] uppercase">AL hilal</h1>
@@ -46,6 +50,7 @@ const UpcomingMatchCard = ({ color }) => {
           <h1 className='text-yellow-300 text-[10px] md:text-[1vw] '>02:00pm</h1>
         </div>
       </div>
+    </div>
     </div>
   );
 };

@@ -30,7 +30,6 @@ const Ticketsdata = () => {
 
     fetchData();
   }, []);
-  console.log("data from tickets data component", data);
 
   return (
     <div>
