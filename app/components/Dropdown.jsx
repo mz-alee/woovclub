@@ -1,40 +1,52 @@
-"use client"
-import React,{useState} from "react";
-import { IoIosArrowDown } from "react-icons/io";
-import { IoIosArrowUp } from "react-icons/io";
-const Dropdownlist = ({top}) => {
+"use client";
+import React, { useState } from "react";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+const Dropdownlist = ({ ticketTypes, onSelect }) => {
   return (
-    <div className={`text-black bg-[#51a2ff] w-[90px] py-2 absolute left-0 top-8 rounded-[0.2vw] z-10 `}>
-      <ul className="flex items-center cursor-pointer  flex-col gap-2">
-        <li className="border-b w-full text-center  border-gray-600 pb-1">
-          profile
-        </li>
-        <li className="border-b w-full text-center border-gray-600 pb-1">
-          profile
-        </li>
-        <li>profile</li>
+    <div className="text-black bg-[#51a2ff] w-[90px] absolute left-0 top-8 rounded-[0.2vw] z-10">
+      <ul className="flex items-center cursor-pointer flex-col">
+        {ticketTypes && ticketTypes.length && ticketTypes.map((item, index) => (
+          <li
+            key={index}
+            onClick={() => onSelect(item)} 
+            className="border-b w-full text-center hover:bg-white/40 h-8 border-gray-600"
+          >
+            {item}
+          </li>
+        ))}
       </ul>
     </div>
   );
 };
 
-const Dropdown = ({name}) => {
+const Dropdown = ({ name, ticketTypes }) => {
   const [isDrop, setIsDrop] = useState(false);
-  const [arrowposition ,setarrowposition] = useState(true)
+  const [selectedType, setSelectedType] = useState();
+
+  const handleSelect = (item) => {
+    setSelectedType(item);
+    setIsDrop(false); 
+  };
+
   return (
-    <div>
+    <div className="relative">
       <p
-        className="capitalize font-ligh  text-sm  text-gray-500 cursor-pointer flex items-center gap-2 "
-        onClick={() => {
-          setIsDrop(!isDrop);
-          setarrowposition(!arrowposition);
-        }}
+        className="capitalize font-light text-sm  cursor-pointer flex items-center gap-2"
+        onClick={() => setIsDrop(!isDrop)}
       >
-        {arrowposition ? <IoIosArrowDown /> : <IoIosArrowUp />}
-        {name}
+        {selectedType}
+        {isDrop ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </p>
-      {isDrop && <Dropdownlist />}
+
+      {isDrop && (
+        <Dropdownlist
+          ticketTypes={ticketTypes}
+          onSelect={handleSelect} 
+        />
+      )}
     </div>
   );
 };
+
 export default Dropdown;

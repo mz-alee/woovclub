@@ -15,13 +15,14 @@ const Landingpage = () => {
           >
             manage your tickets
           </h1>
+          
           <div className=" flex justify-end">
             <Link
               href="/createnewticket"
-              className={`${poppins.className} text-[12px] md:text-[1.2vw]   flex gap-1 items-center capitalize italic font-[600] hover:bg-amber-400 bg-amber-300  text-black rounded-[2vw] px-[2vw] py-[0.9vh]`}
+              className={`${poppins.className} text-[12px] md:text-[1.2vw]   flex gap-1 items-center capitalize italic font-[600]  duration-200 hover:-translate-y-2 hover:bg-amber-400 bg-amber-300 transition group text-black rounded-[2vw] px-[2vw] py-[0.9vh]`}
             >
               create new ticket
-              <FaPlus className="text-sm md:text-[1vw]" />
+              <FaPlus className="text-sm md:text-[1vw] group-hover:rotate-360 duration-400" />
             </Link>
           </div>
         </div>

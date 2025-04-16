@@ -30,11 +30,11 @@ const Footer = ({handlepagenum ,number}) => {
         <button
           onClick={handlepagenum}
           disabled={number>=3}
-          className={`${poppins.className} italic font-[600] bg-[#e5c839] text-[1.3vw] text-black rounded-[2vw] w-[6.5vw] px-[1vw] py-[1vh] flex items-center  gap-[0.3vw]`}
+          className={`${poppins.className} italic  font-[600] bg-[#e5c839] hover:bg-yellow-400 text-[1.3vw] text-black rounded-[2vw] w-[6.5vw] px-[1vw] py-[1vh] flex items-center  gap-[0.3vw] hover:-translate-y-1 my-8 transition duration-300 group`}
         >
           Next
           <span>
-            <RiArrowRightSLine />
+            <RiArrowRightSLine  className='group-hover:translate-x-0.5 duration-300'/>
           </span>
         </button>
       </div>

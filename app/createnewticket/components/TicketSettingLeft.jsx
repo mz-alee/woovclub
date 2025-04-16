@@ -4,8 +4,8 @@ import { EventInformationTable } from '@/app/components/Event-information-table'
 
 const TicketSettingLeft = () => {
   return (
-    <div className='w-full'> 
-            <div className="  border-b   w-full  md:w-full border-gray-700 py-[2vh]">
+    <div className='w-full flex flex-col gap-2'> 
+            <div className="  border-b   w-full  gap-2 md:w-full border-gray-700 py-[2vh]">
               <Hostedmatchcard />
             </div>
             <EventInformationTable />

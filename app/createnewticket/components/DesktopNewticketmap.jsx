@@ -1,9 +1,9 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { poppins } from "../components/Font";
-import Pagination from "../components/Pegination"; 
+import { poppins } from '@/app/components/Font';
+// import Pagination from "../components/Pegination"; 
 import { SlArrowLeft, SlArrowRight } from "react-icons/sl";
-const DesktopTicketMap = ({ data, categoryColors }) => {
+const DesktopNewticketmap = ({ data, categoryColors }) => {
   const [currentPage, setCurrentPage] = useState(1);
   const [TicketLimit] = useState(16);
   const [totalpage, setTotalPage] = useState();
@@ -309,4 +309,4 @@ const DesktopTicketMap = ({ data, categoryColors }) => {
   );
 };
 
-export default DesktopTicketMap;
+export default DesktopNewticketmap;
