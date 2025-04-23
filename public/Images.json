@@ -1,0 +1,11 @@
+[
+  { "id": "1", "src": "./person1.png", "name": "sameer" },
+  { "id": "2", "src": "./person2.png", "name": "salar" },
+  { "id": "3", "src": "./person3.png", "name": "saim" },
+  { "id": "1", "src": "./person1.png", "name": "sameer" },
+  { "id": "2", "src": "./person2.png", "name": "salar" },
+  { "id": "3", "src": "./person3.png", "name": "saim" },
+  { "id": "1", "src": "./person1.png", "name": "sameer" },
+  { "id": "2", "src": "./person2.png", "name": "salar" },
+  { "id": "3", "src": "./person3.png", "name": "saim" }
+]

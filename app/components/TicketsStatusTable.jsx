@@ -1,75 +1,66 @@
-import React from "react";
-import Dropdown from './Dropdown';
-
+"use client";
+import React from "react";;
 const TicketsStatusTable = () => {
+
   return (
-    <div className="rounded-xl   border border-[#484546] bg-gray-600/10   md:h-[44vh] w-full ">
-      <div className="header  text-white flex flex-col sm:flex-row bg-re px-[1.4vw] py-[1vh] items-center gap-[1.5vw]">
-        <div className="flex sm:block text-sm md:text-lg lg:text-[1vw] gap-[1vh] justify-between">
-          <h1>Available Tickets</h1>
-          <div className='flex relative  justify-between items-center gap-2'>
-          <p className="capitalize font-light ">sort by updated date</p>
-          <Dropdown/>
-          </div>
-        </div>
-        <div className="btns items-center flex gap-[1vw]">
-          <button className="border text-[10px] h-[4vh]  md:h-[5vh] md:text-[1vw] border-white rounded-[1.5vw] text-white px-[1.5vw] ">
-            Hosted
-          </button>
-          <button className="bg-blue-400 text-[10px]  h-[4vh] md:h-[5vh] md:text-[1vw] text-black rounded-[1.5vw] px-2 py-1">
-            Club events
-          </button>
+    <div className="border border-gray-600 rounded-2xl h-[40vh] sm:h-[40vh] w-full overflow-hidden">
+    <div className="header text-white flex flex-col sm:flex-row bg-re px-[1.4vw] py-[1vh] items-center gap-[1.5vw]">
+      <div className="flex sm:block text-sm md:text-md lg:text-[1vw] gap-[1vh] justify-between">
+        <h1>Available Tickets</h1>
+        <div className="flex relative justify-between items-center gap-2">
+          <select className="flex items-center capitalize">
+            <option className="text-black" value="">sort by updated date</option>
+            <option className="text-black" value="option1">options</option>
+            <option className="text-black" value="option2">filter</option>
+            <option className="text-black" value="option3">data</option>
+          </select>
         </div>
       </div>
-      <div className="detail-container   text-white h-full w-full px-4 ">
-        <div className="table  w-full">
-          <table className="w-full border-collapse">
-            <thead>
-              <tr className="text-[10px] md:text-[12px] lg:text-[1vw] font-light flex  justify-between">
-                <td className="text-left px-2 py-2 flex-1">Name</td>
-                <div className="flex text-[10px] md:text-[12px] lg:text-[1vw] md:mr-4  gap-4">
-                  <td className="text-right py-2 px-2  md:w-15">Status</td>
-                  <td className="text-right py-2 px-2  md:w-15">Total</td>
-                  <td className="text-right py-2 px-2  md:w-15">Booked</td>
-                  <td className="text-right py-2 px-2  md:w-15">Date</td>
-                </div>
-              </tr>
-            </thead>
-
-            <tbody className="flex   h-[10rem] sm:h-[25vh]  flex-col gap-2 overflow-y-scroll scrollbar-hide ">
-              {[...Array(15)].map((_, index) => (
-                <tr
-                  key={index}
-                  className="bg-white/10  text-[8px] md:text-[12px] lg:text-[1vw]  flex justify-between rounded-[0.5vw] py-[0.5vh] px-[0.5vw] "
-                >
-                  <td className="text-left   px-2 py-1 flex-1">
-                    new football event
-                  </td>
-                  <div className="flex gap-5 items-center ">
-                    <td className="text-right   text-green-400  border-r border-gray-500 h-3 md:w-15 flex items-center">
-                      Available
-                    </td>
-                    <td className="text-right  px-2 border-r border-gray-500 h-3 md:w-15 flex items-center">
-                      124
-                    </td>
-                    <td className="text-right   border-r border-gray-500 px-2 h-3  md:w-15 flex items-center ">
-                      100
-                    </td>
-                    <td className="text-right  px-2 py-1 md:w-15">28 Mar</td>
-                  </div>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-        {/* footer  */}
-        <div className="w-full flex justify-end items-center py-1">
-          <h1 className="text-gray-400 text-[12px] font-light">
-            last update:1day ago
-          </h1>
-        </div>
+      <div className="btns items-center flex gap-[1vw]">
+        <button className="border text-[10px] h-[4vh] md:h-[5vh] md:text-[1vw] border-white rounded-2xl text-white px-[10px]">Hosted</button>
+        <button className="bg-blue-400 text-[10px] h-[4vh] md:h-[5vh] md:text-[1vw] text-black rounded-2xl px-2 py-1">Club events</button>
       </div>
     </div>
+  
+    <div className="px-[1vw] py-[1vh]"></div>
+  
+    <div className="px-[1vw] text-white h-full w-full">
+      <div className="w-full overflow-x-auto   px-4">
+        <table className="w-full border-collapse  min-w-[600px]">
+          <thead>
+            <tr className="text-[10px] lg:text-[1vw] font-light flex gap-2 justify-between px-[10px]">
+              <td className="text-left px-2 py-2 flex-1">Name</td>
+              <td className="text-center py-2 px-2 w-[50px] md:w-[70px]">Total</td>
+              <td className="text-center py-2 px-2 w-[50px] md:w-[70px]">Status</td>
+              <td className="text-center py-2 px-2 w-[50px] md:w-[70px]">Booked</td>
+              <td className="text-center py-2 px-2 w-[50px] md:w-[70px]">Date</td>
+            </tr>
+          </thead>
+  
+          <tbody className="flex flex-col gap-2 h-[10rem]  pt-2 pb-8 sm:min-h-[25vh] overflow-y-scroll scrollbar-hide">
+            {[...Array(15)].map((_, index) => (
+              <tr
+                key={index}
+                className="bg-white/10 w-full hover:bg-[#652ebd] text-[10px] lg:text-[0.8vw] flex justify-between items-center gap-2 rounded-[0.8vw] px-[10px] sm:py-[1vh]"
+              >
+                <td className="text-left font-bold px-2 py-1 flex-1">new football event</td>
+                <td className="text-center font-bold px-2 h-fit w-[60px] md:w-[70px] border-r text-green-500 border-gray-500 border-opacity-50">Available</td>
+                <td className="text-center font-bold px-2 h-fit w-[60px] md:w-[70px] border-r border-gray-500 border-opacity-50">124</td>
+                <td className="text-center font-bold px-2 w-[60px] md:w-[70px] h-fit border-r border-gray-500 border-opacity-50">29</td>
+                <td className="text-center font-bold px-2 w-[60px] h-fit md:w-[70px]">25 May 2025</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  
+
+
+   
+  
+
   );
 };
 

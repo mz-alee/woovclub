@@ -6,18 +6,18 @@ import { poppins } from "./Font";
 const Hostedmatchcard = () => {
   return (
     <div
-      className={`lr-cut-div hosted-match bg-[#55299b]  w-full md:w-full flex flex-col justify-between h-[24vh] sm:h-[30vh]  md:h-[26vh] px-[1.5vw] py-[1vh] `}
+      className={`lr-cut-div hosted-match bg-[#55299b] -z-10 w-full md:w-full flex flex-col justify-between h-[24vh] sm:h-[30vh]  md:h-[26vh] px-[1.5vw] py-[1vh] `}
     >
       <h1 className="text-[#e5c839] italic font-[400] text-center text-sm md:text-[1.2vw]">
         Hosted Match
       </h1>
       <div className="flex items-center justify-between border-b-2 border-dotted pb-2  border-black ">
         <div className="profile-1 flex gap-[0.5vh] flex-col items-center">
-          <div className="bg-white h-[50px] w-[50px]  lg:h-[7.5vh] lg:w-[3.5vw] flex justify-center items-center rounded-full">
+          <div className="bg-white h-[50px] w-[50px]  md:h-[40px] md:w-[40px]  lg:h-[60px] lg:w-[60px] flex justify-center items-center rounded-full">
             <Image
               src={SaudiProfile}
               alt="profile"
-              className="w-fit h-fit md:w-[3vw] md:h-[6.5vh] object-center"
+              className="w-fit h-fit  md:h-[40px] md:w-[40px]  lg:h-[60px] lg:w-[60px] object-center"
             />
           </div>
           <h1 className="text-sm md:text-[1vw] uppercase">Saff</h1>
@@ -31,11 +31,11 @@ const Hostedmatchcard = () => {
         </div>
 
         <div className="profile-2 flex flex-col gap-[0.5vh] items-center">
-          <div className="bg-white h-[50px] w-[50px]  lg:h-[7.5vh] lg:w-[3.5vw] flex justify-center items-center rounded-full">
+          <div className="bg-white h-[50px] w-[50px]  md:h-[40px] md:w-[40px]  lg:h-[60px] lg:w-[60px] flex justify-center items-center rounded-full">
             <Image
               src={AlHILALProfile}
               alt="profile"
-              className="w-fit h-fit md:w-[3vw] md:h-[6.5vh] object-center"
+              className="w-fit h-fit   md:h-[40px] md:w-[40px]  lg:h-[60px] lg:w-[60px] object-center"
             />
           </div>
           <h1 className="text-sm md:text-[1vw] uppercase">AL hilal</h1>

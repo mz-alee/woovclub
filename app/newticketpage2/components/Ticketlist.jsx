@@ -1,8 +1,13 @@
 "use client";
 import Dropdown from "@/app/components/Dropdown";
 import React from "react";
-
-const Ticketlist = ({ register, setValue, getValues, poppins, index }) => {
+import { useWatch } from "react-hook-form";
+const Ticketlist = ({ register, setValue, getValues, poppins, index ,control,errors}) => {
+  const price = useWatch({
+    control,
+    name: `tickets.${index}.price`,
+  });
+  
   const handlePriceChange = (delta) => {
     console.log("deltaaaaaaaa",delta);
     
@@ -14,15 +19,15 @@ const Ticketlist = ({ register, setValue, getValues, poppins, index }) => {
   };
 
   return (
-    <div className="flex flex-col justify-between w-full">
-      <div className="list1 flex justify-between">
+    <div className="flex flex-col  justify-between w-full">
+      <div className="list1  flex justify-between">
         <h1>Ticket {index + 1}</h1>
 
         <div className="flex gap-[1vw] md:gap-[0.5vw] items-center">
           {/* Dropdown Type */}
           <div className="dropdownlist relative bg-[#45b7db] rounded-[1.5vw] h-[7vh] min:w-[20vw] md:h-[7vh] md:w-[8vw] py-2 flex gap-2 justify-between items-center px-2">
             <select
-              {...register(`tickets.${index}.type`)}
+              {...register(`tickets`)}
               className="bg-transparent outline-none text-[12px] w-full"
             >
               <option value="">Select Type</option>
@@ -40,7 +45,7 @@ const Ticketlist = ({ register, setValue, getValues, poppins, index }) => {
             <div
               className={`${poppins.className} italic font-[600] text-[17px] md:text-xl flex items-center gap-2`}
             >
-              <button type="button" onClick={() => handlePriceChange(-2)}>
+              <button  disabled={price < 1} type="button" onClick={() => handlePriceChange(-1)}>
                 -
               </button>
               <input
@@ -55,6 +60,7 @@ const Ticketlist = ({ register, setValue, getValues, poppins, index }) => {
           </div>
         </div>
       </div>
+      {errors.tickets&& <p className='error'>{errors.tickets.message}</p>}
     </div>
   );
 };

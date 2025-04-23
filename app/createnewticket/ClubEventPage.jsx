@@ -159,7 +159,7 @@ const   ClubEventPage = ({togglebtn}) => {
                       Reset
                     </a>
                     <button
-                    onClick={()=>{router.push('/newticketpage2')}}
+                    // onClick={()=>{router.push('/newticketpage2')}}
                       className={`${poppins.className} italic font-[600] bg-[#e5c839] text-[1.3vw] text-black rounded-[2vw] w-[6.5vw] px-[1vw] py-[1vh] flex items-center  gap-[0.3vw]`}
                     >
                       Next

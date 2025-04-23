@@ -1,25 +1,24 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import Modal from "react-modal";
-
-const ModalExample = ({ btnName, handleAddseat, register, series }) => {
-  const [isOpen, setIsOpen] = useState(false);
+const ModalExample = ({
+  btnName,
+  handleAddseat,
+  register,
+  series,
+  errors,
+  isOpen,
+  setIsOpen,
+}) => {
   useEffect(() => {
     Modal.setAppElement("#root");
   }, []);
 
   return (
     <div>
-      <button
-        className="bg-blue-400 text-white rounded-2xl text-sm capitalize italic px-2  py-1  hover:bg-blue-500 "
-        onClick={() => setIsOpen(true)}
-      >
-        {btnName}
-      </button>
-
       <Modal
         isOpen={isOpen}
-        onRequestClose={() => setIsOpen(false)}
+        // onRequestClose={() => setIsOpen(false)}
         contentLabel="My Modal"
         style={{
           overlay: {
@@ -56,6 +55,7 @@ const ModalExample = ({ btnName, handleAddseat, register, series }) => {
                   <option value="Right">Right</option>
                 </select>
               </div>
+              {errors.type && <p className="error">{errors.type.message}</p>}
             </div>
           </div>
           {/* seat numbers  */}
@@ -63,10 +63,15 @@ const ModalExample = ({ btnName, handleAddseat, register, series }) => {
             <div className="w-full flex flex-col gap-1 items-start">
               <p className=" capitalize text-[13px]"> number of seats</p>
               <input
+                type="number"
                 {...register("addSeat", { valueAsNumber: true })}
                 className="border w-full border-gray-800 focus:border-blue-400 outline-none rounded-sm px-2 py-1"
+                placeholder="Add seat number"
               />
             </div>
+            {errors.addSeat && (
+              <p className="error">{errors.addSeat.message}</p>
+            )}
           </div>
           {/* Availability  */}
           <div className="w-full">
@@ -94,13 +99,16 @@ const ModalExample = ({ btnName, handleAddseat, register, series }) => {
                     series.length &&
                     series?.map((items, index) => {
                       return (
-                        <option key={index} value="">
+                        <option key={index} value={items}>
                           {items}
                         </option>
                       );
                     })}
                 </select>
               </div>
+              {errors.category && (
+                <p className="error">{errors.category.message}</p>
+              )}
             </div>
           </div>
           {/* btns  */}
@@ -114,6 +122,7 @@ const ModalExample = ({ btnName, handleAddseat, register, series }) => {
               Cancle
             </button>
             <button
+              type="submit"
               onClick={handleAddseat}
               className="bg-blue-400 hover:bg-blue-500 rounded-2xl px-4 py-1 text-white"
             >

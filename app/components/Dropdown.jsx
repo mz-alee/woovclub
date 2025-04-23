@@ -2,31 +2,33 @@
 import React, { useState } from "react";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 
-const Dropdownlist = ({ ticketTypes, onSelect }) => {
+const Dropdownlist = ({ onSelect, item }) => {
   return (
     <div className="text-black bg-[#51a2ff] w-[90px] absolute left-0 top-8 rounded-[0.2vw] z-10">
       <ul className="flex items-center cursor-pointer flex-col">
-        {ticketTypes && ticketTypes.length && ticketTypes.map((item, index) => (
-          <li
-            key={index}
-            onClick={() => onSelect(item)} 
-            className="border-b w-full text-center hover:bg-white/40 h-8 border-gray-600"
-          >
-            {item}
-          </li>
-        ))}
+        {item &&
+          item.length &&
+          item.map((item, index) => (
+            <li
+              key={index}
+              onClick={() => onSelect(item)}
+              className="border-b w-full text-center hover:bg-white/40 h-8 border-gray-600"
+            >
+              {item}
+            </li>
+          ))}
       </ul>
     </div>
   );
 };
 
-const Dropdown = ({ name, ticketTypes }) => {
+const Dropdown = ({ item }) => {
   const [isDrop, setIsDrop] = useState(false);
   const [selectedType, setSelectedType] = useState();
 
   const handleSelect = (item) => {
     setSelectedType(item);
-    setIsDrop(false); 
+    setIsDrop(false);
   };
 
   return (
@@ -39,12 +41,7 @@ const Dropdown = ({ name, ticketTypes }) => {
         {isDrop ? <IoIosArrowUp /> : <IoIosArrowDown />}
       </p>
 
-      {isDrop && (
-        <Dropdownlist
-          ticketTypes={ticketTypes}
-          onSelect={handleSelect} 
-        />
-      )}
+      {isDrop && <Dropdownlist onSelect={handleSelect} item={item} />}
     </div>
   );
 };

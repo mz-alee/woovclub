@@ -10,7 +10,7 @@ const Navbar = () => {
         <Image src={logo} alt="logo"  className='w-[12vw] h-[4vh] sm:w-[6vw] sm:h-[4vh]  md:w-[5vw] md:h-[5vh]'></Image>
       </div>
       <div className='flex gap-2 items-center'>
-        <div className=" bell flex items-center justify-center   bg-white h-[28px] w-[28px] md:w-[3vw] md:h-[6vh]  rounded-full">
+        <div className=" bell flex items-center justify-center   bg-white h-[28px] w-[28px] md:w-[40px] md:h-[40px]  rounded-full">
           <CiBellOn className='w-[12vw] h-[4vh] md:w-[8vw] md:h-[4vh]'/>
         </div>
           <div>

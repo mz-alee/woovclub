@@ -1,6 +1,6 @@
 import React from "react";
 import Landingpage from './Landingpage';
-import Ticketsdata from './TicketsMap/Ticketsdata';
+
 const page = () => {
   return (
     <>

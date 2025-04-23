@@ -5,9 +5,10 @@ import { poppins } from "./components/Font";
 import { FaPlus } from "react-icons/fa";
 import Link from "next/link";
 import TicketsStatusTable from "./components/TicketsStatusTable";
+import DynamicPricing from './components/DynamicPricing';
 const Landingpage = () => {
   return (
-    <div className="  w-full  flex flex-col min-h-[90vh]  items-center justify-between   gap-[2.5vh]  py-[2vh] ">
+    <div className="  w-full  flex flex-col   items-center justify-between   gap-[2.5vh]  py-[2vh] ">
       <div className="row1  text-white min-h-[40vh] w-full    flex flex-col gap-2 lg:flex-row items-center   ">
         <div className="details   flex flex-col justify-center items-center  lg:items-end w-full lg:w-[40%] h-full ">
           <h1
@@ -32,7 +33,7 @@ const Landingpage = () => {
         </div>
       </div>
       <div className="w-full  flex justify-center">
-        <div className="w-full  md:w-[70%] lg:w-full ">
+        <div className="w-full text-white  md:w-[70%] lg:w-full ">
           <TicketsStatusTable />
         </div>
       </div>
