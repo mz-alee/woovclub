@@ -3,13 +3,13 @@ import React from "react";
 import Link from "next/link";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { poppins } from '@/app/components/Font';
-const Footer = ({handlepagenum ,number}) => {
+const Footer = ({handlepagenum ,number,totalpage}) => {
   console.log("number",number);
   
   
   return (
     <div className="footer  h-[10vh] w-full  mt-[1vw]">
-      <div className="flex gap-[0.5vw]  items-center">
+      {/* <div className="flex gap-[0.5vw]  items-center">
         <input type="checkbox" className="check-box" />
 
         <h1 className={`${poppins.className}  text-sm md:text-[0.8vw]`}>i agree with Woov Club's</h1>
@@ -19,7 +19,7 @@ const Footer = ({handlepagenum ,number}) => {
         >
           terms and condition
         </Link>
-      </div>
+      </div> */}
       <div className="flex justify-between items-center">
         <a
           href="/"
@@ -29,7 +29,7 @@ const Footer = ({handlepagenum ,number}) => {
         </a>
         <button
           onClick={handlepagenum}
-          disabled={number>=3}
+          disabled={number>=totalpage}
           className={`${poppins.className} italic  font-[600] bg-[#e5c839] hover:bg-yellow-400 text-[2vw] text-black rounded-2xl w-[9.5vw] md:text-[1vw] md:rounded-4xl md:w-[6vw] px-[1vw] py-[1vh] flex items-center  gap-[0.3vw] hover:-translate-y-1 my-8 transition duration-300 group`}
         >
           Next

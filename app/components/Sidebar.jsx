@@ -29,9 +29,7 @@ import union from "../../public/Union.png";
 const Sidebar = () => {
   const [active, setActive] = useState(false);
   const path = usePathname();
-  // const getActiveClass = (routeName) => {
-  //   return path.includes(routeName) ? "text-yellow-500" : "text-white";
-  // };
+
 
   // Handle click event to toggle sidebar
   const handleClick = () => {
@@ -68,8 +66,9 @@ const Sidebar = () => {
 
         {/* Links */}
         <div className="links   w-full  flex  items-center flex-col gap-4 text-lg">
+          <div className='flex  justify-center w-full relative'>
           <div
-            className={`relative  ${
+            className={`  ${
               active
                 ? "w-20 border-b py-1.5 border-gray-600 flex items-center gap-1"
                 : "py-1.5 border-b border-gray-600"
@@ -77,10 +76,10 @@ const Sidebar = () => {
           >
             <Link
               className={`${active ? "flex items-center gap-2" : ""}`}
-              href="/Ads"
+              href="/ads"
             >
               <Image
-                src={path === "/Ads" ? activeicon1 : icon1}
+                src={path === "/ads" ? activeicon1 : icon1}
                 alt="icon1"
                 className="z-10 md:w-[1.5vw] md:h-[3.5vh]"
               />
@@ -89,14 +88,14 @@ const Sidebar = () => {
               )}
             </Link>
             <div
-              className={`absolute  w-[2.8vw] h-[14vh] -z-10 flex ${
-                path === "/Ads" ? "   -top-7   " : "hidden"
+              className={`absolute  right-0 w-[40px] xl:w-[3vw] h-[14vh] -z-10 flex ${
+                path === "/ads" ? "   -top-7 2xl:-top-9  " : "hidden"
               }`}
             >
               <Image src={navActiveBg} alt="navbg" className=" " />
             </div>
           </div>
-
+          </div>
           {/* Posts Link */}
           <div className="relative w-full flex justify-center">
             <div

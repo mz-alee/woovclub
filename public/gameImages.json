@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "name": "football",
+    "src": "/compaingImages/football.png"
+  },
+  {
+    "id": 2,
+    "name": "tennis",
+    "src": "/compaingImages/tennis.png"
+  },
+  {
+    "id": 3,
+    "name": "basketball",
+    "src": "/compaingImages/basketball.png"
+  },
+  {
+    "id": 4,
+    "name": "paintball",
+    "src": "/compaingImages/paintball.png"
+  },
+  {
+    "id": 5,
+    "name": "padel",
+    "src": "/compaingImages/padel.png"
+  }
+]

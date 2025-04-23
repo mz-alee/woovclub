@@ -2,7 +2,6 @@
 import React, { useState, useEffect } from "react";
 import { poppins } from "../components/Font";
 import { MdOutlineKeyboardArrowLeft } from "react-icons/md";
-import Dropdown from "../components/Dropdown";
 import { useRouter } from "next/navigation";
 import Footer from "./components/Footer";
 import HostedLeftSide from "./components/HostedLeftSide";
@@ -10,12 +9,14 @@ import HostedRightSide from "./components/HostedRightSide";
 import TicketSettingComponent from "./components/TicketSettingComponent";
 import TicketSettingLeft from "./components/TicketSettingLeft";
 import Page3RightSide from "./components/Page3RightSide";
-import ClubEventRight from './components/ClubEventRight';
-import ClubEventLeft from './ClubEventLeft';
-const Page = ({togglebtn}) => {
+import ClubEventRight from "./components/ClubEventRight";
+import ClubEventLeft from "./ClubEventLeft";
+const Page = () => {
   const [pageincrement, setpageincreament] = useState(1);
-  const [isActive,setIsActive]=useState(true)
+  const [isActive, setIsActive] = useState(true);
   const [number, setnumber] = useState(1);
+  const [totalpage, settotalpage] = useState(3);
+
   const router = useRouter();
   const handlepagenum = () => {
     setnumber((prevNumber) => prevNumber + 1);
@@ -25,11 +26,10 @@ const Page = ({togglebtn}) => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [number]);
 
-  const toggleFunction=()=>{
-    setIsActive(!isActive)
+  const toggleFunction = () => {
+    setIsActive(!isActive);
     console.log(isActive);
-    
-  }
+  };
   return (
     <div className="ticket-page w-full   text-white grid md:grid-cols-12">
       <div className="left-container w-full h-full  md:col-span-4   ">
@@ -46,9 +46,9 @@ const Page = ({togglebtn}) => {
                   setnumber(number - 1);
                 }
               }}
-              className={`${poppins.className} font-[600] bg-[#45b7db] hover:text-white transition  hover:-translate-y-0.5 duration-200 group  w-fit h-[5vh] px-[0.7vw] text-sm md:text-[0.7vw] flex items-center gap-[0.5vw] text-black rounded-2xl py-[1vh]`}
+              className={`${poppins.className} font-[600] bg-[#45b7db] hover:text-white transition  hover:-translate-y-0.5 duration-200 group  w-fit h-[5vh] px-[0.7vw] text-[10px] md:text-[0.7vw] flex items-center gap-[0.5vw] text-black rounded-2xl py-[1vh]`}
             >
-              <MdOutlineKeyboardArrowLeft className="text-[1.3vw] font-light group-hover:rotate-95 duration-200" />
+              <MdOutlineKeyboardArrowLeft className="text-sm md:text-[1.3vw] font-light group-hover:rotate-95 duration-200" />
               {number === 1 && "Tickets Management"}
               {number === 2 && "Hosted Page"}
               {number === 3 && "Ticket Setting Page"}
@@ -65,8 +65,16 @@ const Page = ({togglebtn}) => {
           </div>
           {/* left side content  */}
           <div className="w-full flex  h-[70vh] flex-col items-center gap-[1.5vw] border-r border-gray-600 pr-[2vw]">
-            {number === 1 ? isActive? <HostedLeftSide /> : <ClubEventLeft />:''}
-            {number === 2 || number === 3 ? <TicketSettingLeft/>:''}
+            {number === 1 ? (
+              isActive ? (
+                <HostedLeftSide />
+              ) : (
+                <ClubEventLeft />
+              )
+            ) : (
+              ""
+            )}
+            {number === 2 || number === 3 ? <TicketSettingLeft /> : ""}
             {/* {number === 3 && <TicketSettingLeft/>} */}
           </div>
         </div>
@@ -76,15 +84,26 @@ const Page = ({togglebtn}) => {
           {/* right side container  */}
           <div className="scrollbar-hide w-full md:h-[70vh] min-md:w-[70vw]   overflow-y-scroll  ">
             {/* header  */}
-          
+
             {/* right side content  */}
             <div className=" w-full">
-              {number === 1 ? isActive?<HostedRightSide isActive={isActive} toggleFunction={toggleFunction}/>:<ClubEventRight toggleFunction={toggleFunction}/>:""}
+              {number === 1 ? (
+                isActive ? (
+                  <HostedRightSide
+                    isActive={isActive}
+                    toggleFunction={toggleFunction}
+                  />
+                ) : (
+                  <ClubEventRight toggleFunction={toggleFunction} />
+                )
+              ) : (
+                ""
+              )}
               {number === 2 && <TicketSettingComponent />}
               {number === 3 && <Page3RightSide />}
             </div>
             {/* footer  */}
-            <Footer handlepagenum={handlepagenum} number={number} />
+            <Footer totalpage={totalpage} handlepagenum={handlepagenum} number={number} />
           </div>
         </div>
       </div>
@@ -93,9 +112,3 @@ const Page = ({togglebtn}) => {
 };
 
 export default Page;
-
-
-
-
-
-
