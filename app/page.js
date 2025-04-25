@@ -4,7 +4,7 @@ import Landingpage from './Landingpage';
 const page = () => {
   return (
     <>
-    <div >
+    <div>
     <Landingpage/>
     </div>
     </>

@@ -14,7 +14,7 @@ const Navbar = () => {
           <CiBellOn className='w-[12vw] h-[4vh] md:w-[8vw] md:h-[4vh]'/>
         </div>
           <div>
-          <Image src={logo2} className='w-[12vw] h-[4vh] md:w-[4vw] md:h-[6vh]' alt='logo' />
+          <Image src={logo2} className='w-[40px] h-[4vh] md:w-[40px] md:h-[6vh]' alt='logo' />
           </div>
       </div>
     </div>

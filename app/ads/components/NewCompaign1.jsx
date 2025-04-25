@@ -1,8 +1,10 @@
 "use client";
 import { poppins } from "@/app/components/Font";
+import Footer from "@/app/createnewticket/components/Footer";
 import { yupResolver } from "@hookform/resolvers/yup";
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
+import { RiArrowRightSLine } from "react-icons/ri";
 import { toast, ToastContainer } from "react-toastify";
 import * as yup from "yup";
 
@@ -13,7 +15,7 @@ const CompaignSchema = yup.object({
   gameCategory: yup.string().required(),
 });
 
-const CreateNewCompaign1 = () => {
+const CreateNewCompaign1 = ({ handlepagenum, number, totalpage }) => {
   const [gameData, setGameData] = useState([]);
   const [activeIndex, setActiveIndex] = useState(null);
   useEffect(() => {
@@ -41,6 +43,7 @@ const CreateNewCompaign1 = () => {
     setValue,
     getValues,
     handleSubmit,
+    trigger,
     formState: { errors },
   } = useForm({
     mode: "onChange",
@@ -53,9 +56,17 @@ const CreateNewCompaign1 = () => {
   });
   const value = getValues();
 
+  console.log("state data", value);
+
+  const onSubmit = (data) => {};
+  const error = Object.keys(errors);
+  console.log(error);
+
+  console.log("errors", errors);
   const handleValidations = () => {
+    // trigger();
     if (errors.compaignTitle) {
-      toast.error("title error");
+      toast.error("title is required");
       return;
     }
     if (errors.dropdown) {
@@ -67,16 +78,13 @@ const CreateNewCompaign1 = () => {
       return;
     }
   };
-  console.log("state data", value);
-  console.log("errors", errors);
-
   return (
     <div className="w-full">
       <ToastContainer />
       <h1 className={`${poppins.className} text-[12px] my-2 text-white`}>
         Create New Campaign
       </h1>
-      <form onSubmit={handleSubmit(onsubmit)}>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div className="bg-[#ededed] rounded-2xl text-black w-full  min-h-[35vh] px-[1.5vw] flex flex-col justify-around">
           <div>
             <h1 className={`${poppins.className} text-[12px] font-light`}>
@@ -144,7 +152,7 @@ const CreateNewCompaign1 = () => {
                     key={index}
                     className={`${
                       activeIndex === index ? "bg-blue-400" : "bg-gray-500/30 "
-                    } h-[6vh] w-fit px-3 rounded-xl flex items-center gap-2 justify-center cursor-pointer`}
+                    } h-[6vh] w-fit px-3 rounded-xl flex items-center gap-2 justify-center cursor-pointer hover:bg-blue-400`}
                   >
                     <img src={items.src} width={20} alt="" />
                     <h1
@@ -168,9 +176,32 @@ const CreateNewCompaign1 = () => {
           {errors.gameCategory && (
             <p className="error">{errors.gameCategory.message}</p>
           )}
-          <button onClick={handleValidations} type="submit">
-            submit
-          </button>
+        </div>
+
+        {/* footer  */}
+        <div className="footer  h-[10vh] w-full  mt-[1vw]">
+          <div className="flex justify-between items-center">
+            <a
+              href="/"
+              className={`${poppins.className} font-light text-sm md:text-[1vw]`}
+            >
+              Reset
+            </a>
+            <button
+              type="button"
+              onClick={() => {
+                // handleValidations();
+                handlepagenum();
+              }}
+              disabled={number >= totalpage}
+              className={`${poppins.className} italic  font-[600] bg-[#e5c839] hover:bg-yellow-400 text-[2vw] text-black rounded-2xl w-[9.5vw] md:text-[1vw] md:rounded-4xl md:w-[6vw] px-[1vw] py-[1vh] flex items-center  gap-[0.3vw] hover:-translate-y-1 my-8 transition duration-300 group`}
+            >
+              Next
+              <span>
+                <RiArrowRightSLine className="group-hover:translate-x-0.5 duration-300" />
+              </span>
+            </button>
+          </div>
         </div>
       </form>
     </div>

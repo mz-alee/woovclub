@@ -27,9 +27,9 @@ export default function RootLayout({ children }) {
           <div className="h-screen  fixed flex items-center px-1">
             <Sidebar/>
           </div>
-          <div className=" scrollbar-hide w-full overflow-y-scroll sm:pl-[8vw]  md:pl-[8vw] px-[4vw] md:pr-[3.5vw]   ">
+          <div className=" scrollbar-hide w-full overflow-y-scroll sm:pl-[8vw]  md:pl-[7vw] px-[4vw] md:pr-[2.5vw]   ">
             <Navbar/>
-            <div className='content-area'>
+            <div className='content-area '>
             {children}
             </div>
           </div>
