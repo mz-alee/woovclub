@@ -43,7 +43,7 @@ const PaymentLeft = () => {
             3 Days
           </h1>
         </div>
-        <div className="flex justify-between items-center  gap-2 w-full ">
+        <div className="flex justify-between items-center  gap-2 w-full px-1 ">
           {/* start date  */}
           <div className="start-date flex flex-col gap-1">
             <h1 className="text-gray-300 text-[10px] md:text-[0.8vw]  ">
@@ -58,7 +58,7 @@ const PaymentLeft = () => {
           {/* border  */}
           <div className="border-b border-[#666667] w-full"></div>
           {/* end date  */}
-          <div className="end-date flex flex-col gap-1">
+          <div className="end-date flex flex-col  gap-1 text-right">
             <h1 className="text-gray-300 text-[10px] md:text-[0.8vw]">End</h1>
             <h1
               className={`${poppins.className} text-[11px]  md:text-[0.8vw] italic text-red-400 font-[500]`}

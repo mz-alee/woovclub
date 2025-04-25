@@ -260,7 +260,7 @@ const CompaignSettingRight = ({ handlepagenum, number, totalpage }) => {
           </a>
           <button
             type="button"
-            onClick={() => {
+            onClick={() => {  
               // handleValidations();
               handlepagenum();
             }}
