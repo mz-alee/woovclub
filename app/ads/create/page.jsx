@@ -10,7 +10,6 @@ import CompaignDataRight from "../components/CampaignDataRight";
 import CompaignDataLeft from "../components/CampaignDataLeft";
 import PaymentRight from "../components/PaymentRight";
 import PaymentLeft from "../components/PaymentLeft";
-import { CampaingProvider } from "../CampaignContext";
 
 const exam_day = [
   "20 , tuesday",
@@ -60,7 +59,6 @@ const Page = () => {
   // console.log("page 2 data from main page", page2Values);
 
   return (
-    <CampaingProvider>
       <div
         className={`ticket-page w-full min:h-[100vh]   text-white ${
           number > 1 && "grid md:grid-cols-12 "
@@ -174,7 +172,6 @@ const Page = () => {
           </div>
         </div>
       </div>
-    </CampaingProvider>
   );
 };
 

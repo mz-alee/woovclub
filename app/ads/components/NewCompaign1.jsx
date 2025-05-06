@@ -7,7 +7,6 @@ import { Controller, useForm } from "react-hook-form";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { toast, ToastContainer } from "react-toastify";
 import * as yup from "yup";
-import { CampaignContext, useCampaignContext } from "../CampaignContext";
 import { DropDown } from "./DropDown";
 import otherImage from "../.../../../../public/compaingImages/other.png";
 import Image from "next/image";
