@@ -1,7 +1,9 @@
 import { poppins } from "@/app/components/Font";
 import React from "react";
 
-const PaymentLeft = () => {
+const PaymentLeft = ({ values }) => {
+  console.log("valuesss", values);
+
   return (
     <div className="w-full min:h-full bg-white/5 p-2 flex flex-col gap-2  backdrop:backdrop-blur-2xl  rounded-xl">
       {/* ad detail */}
@@ -25,12 +27,12 @@ const PaymentLeft = () => {
           <h1
             className={`italic md:text-sm lg:text-[1.2vw]  text-gray-300 font-[900]  ${poppins.className}`}
           >
-            3 SAR
+            {values.budget}
           </h1>
         </div>
       </div>
       {/* duration  */}
-      <div className="border-b border-[#424242] w-full py-2 min-h-[17vh] gap-1 flex flex-col justify-between ">
+      <div className="border-b border-[#424242] w-full py-2 min-h-[17vh] gap-1 flex flex-col justify-around ">
         <div className="flex justify-between w-full">
           <h1
             className={`${poppins.className} text-[11px]  md:text-[0.8vw] text-gray-300 font-[400]`}
@@ -40,7 +42,7 @@ const PaymentLeft = () => {
           <h1
             className={`italic md:text-sm lg:text-[1.2vw]  text-gray-300 font-[900]  ${poppins.className}`}
           >
-            3 Days
+            {values.daysDuration} Days
           </h1>
         </div>
         <div className="flex justify-between items-center  gap-2 w-full px-1 ">
@@ -52,7 +54,7 @@ const PaymentLeft = () => {
             <h1
               className={`${poppins.className} text-[11px] italic md:text-[0.8vw] text-green-400 font-[500]`}
             >
-              26 April 2025
+              {values.startDate}
             </h1>
           </div>
           {/* border  */}
@@ -63,7 +65,7 @@ const PaymentLeft = () => {
             <h1
               className={`${poppins.className} text-[11px]  md:text-[0.8vw] italic text-red-400 font-[500]`}
             >
-              26 April 2025
+              {values.endDate}
             </h1>
           </div>
         </div>
@@ -78,7 +80,7 @@ const PaymentLeft = () => {
         <h1
           className={`italic md:text-sm lg:text-[1.2vw]  text-gray-300 font-[900]  ${poppins.className}`}
         >
-          All
+          {values.genderType}
         </h1>
       </div>
       {/* age group  */}
@@ -94,26 +96,29 @@ const PaymentLeft = () => {
           <span className="text-gray-400 text-[10px] md:text-[0.7vw]">
             From
           </span>
-          13
+          {values.startAge}
           <span className="text-gray-400 text-[10px] md:text-[0.7vw]">To</span>
-          95
+          {values.endAge}
         </h1>
       </div>
       {/* Locations  */}
       <div className="flex justify-between flex-col border-b border-[#4f5054] py-3 w-full ">
-        <div className="flex justify-between w-full items-center">
-          <h1
-            className={`${poppins.className} text-[11px] capitalize md:text-[0.8vw] text-gray-300 font-[400]`}
-          >
-            area1
-          </h1>
-          <h1
-            className={`italic text-[12px] md:text-sm lg:text-[1.2vw]  text-gray-300 font-[900]  ${poppins.className}`}
-          >
-            Cairo, Egypt
-          </h1>
-        </div>
-        <div className="flex justify-between w-full items-center ">
+        {values.location?.map((items, index) => {
+          return (
+            <div key={index} className="flex justify-between w-full items-center">
+              <h1
+                className={`${poppins.className} text-[11px] capitalize md:text-[0.8vw] text-gray-300 font-[400]`}
+              >
+                area{index+1}
+              </h1>
+              <h1
+                className={`italic text-[12px] md:text-sm lg:text-[1.2vw]  text-gray-300 font-[900]  ${poppins.className}`}
+              > {items}</h1>
+            </div>
+          );
+        })}
+
+        {/* <div className="flex justify-between w-full items-center ">
           <h1
             className={`${poppins.className} text-[11px] capitalize md:text-[0.8vw] text-gray-300 font-[400]`}
           >
@@ -148,7 +153,7 @@ const PaymentLeft = () => {
           >
             Cairo, Egypt
           </h1>
-        </div>
+        </div> */}
       </div>
       {/* impressions  */}
       <div className="flex  flex-col gap-3">
@@ -158,7 +163,7 @@ const PaymentLeft = () => {
           Expected Results
         </h1>
         <div className="flex justify-between gap-4    ">
-          <div className='border-r flex flex-col justify-center items-center border-[#4f5054] w-[20%] h-fit'>
+          <div className="border-r flex flex-col justify-center items-center border-[#4f5054] w-[20%] h-fit">
             <h1
               className={`${poppins.className} text-[10px]  italic capitalize md:text-[0.8vw] text-gray-300 font-[400]`}
             >
@@ -170,7 +175,7 @@ const PaymentLeft = () => {
               1
             </h1>
           </div>
-          <div className='border-r flex flex-col justify-center items-center border-[#4f5054] w-[60%] h-fit'>
+          <div className="border-r flex flex-col justify-center items-center border-[#4f5054] w-[60%] h-fit">
             <h1
               className={`${poppins.className} text-[10px]  italic capitalize md:text-[0.8vw] text-gray-300 font-[400]`}
             >
@@ -182,7 +187,7 @@ const PaymentLeft = () => {
               1
             </h1>
           </div>
-          <div className=' w-[20%] flex flex-col justify-center items-center h-fit'>
+          <div className=" w-[20%] flex flex-col justify-center items-center h-fit">
             <h1
               className={`${poppins.className} text-[10px] italic  capitalize md:text-[0.8vw] text-gray-300 font-[400]`}
             >

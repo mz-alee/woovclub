@@ -4,21 +4,7 @@ import BlueAreaChart from "../charts/BlueAreaChart";
 
 const TotalRavenue = () => {
   return (
-    <div className="rounded-[1vw]  border border-gray-600 bg-[#1e1e1e] overflow-hidden text-sm md:text-[1vw] h-[30vh] md:h-full w-full relative flex flex-col justify-between">
-      <div className="absolute flex justify-around items-center h-full  w-full">
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-        <div className="border-l border-gray-700 h-[18vh] "></div>
-      </div>
+    <div className="rounded-[0.7vw]  border border-[#454446] overflow-hidden text-sm md:text-[1vw] h-[30vh] md:h-full w-full relative flex flex-col justify-between">
       <div className="w-full px-[1vw] pt-[1vh] font-bold capitalize">
         <h1 className="">ravenue</h1>
         <h1 className="opacity-45 font-light">

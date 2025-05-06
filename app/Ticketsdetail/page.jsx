@@ -13,9 +13,9 @@ import Ticketsdata from "../TicketsMap/Ticketsdata";
 const Ticketspage = () => {
   const router = useRouter({});
   return (
-    <div className="ticket-page md:overflow-hidden md:h-[90vh]  w-full   text-white grid md:grid-cols-12">
-      <div className="left-container h-full md:col-span-4   ">
-        <div className="leftside md:w-[25vw]  h-full   flex flex-col items-center py-[0.5vh] gap-[1vw] ">
+    <div className="ticket-page md:overflow-hidden md:h-[90vh]  w-full    text-white grid md:grid-cols-12">
+      <div className="left-container h-full md:col-span-4  ">
+        <div className="leftside md:w-[27vw]  h-full   flex flex-col items-center py-[0.5vh] gap-[1vw] ">
           <div className="flex  items-center gap-[1.5vw] py-[1.5vw] ">
             <button
               onClick={() => {
@@ -32,7 +32,7 @@ const Ticketspage = () => {
               Tickets Details
             </h1>
           </div>
-          <div className="w-full flex  flex-col items-center gap-[1.5vw] md:border-r border-gray-600 pr-[2vw]">
+          <div className="w-full flex  flex-col items-center gap-[1.5vw] md:border-r border-[#454446] pr-[2vw]">
             <div className="  border-b  w-full sm:w-[50vw] md:w-full border-gray-700 py-[2vh]">
               <Hostedmatchcard />
             </div>
@@ -52,7 +52,7 @@ const Ticketspage = () => {
           </div>
           
         </div>
-        <div className=" w-full rounded-[1vw] bg-white/10">
+        <div className=" w-full rounded-[1vw] ">
           <DynamicPricing />
         </div>
         <div className="w-full mt-4">

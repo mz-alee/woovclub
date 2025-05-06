@@ -88,7 +88,7 @@ const DesktopTicketMap = ({ data, categoryColors }) => {
 
   return (
     <div className="hidden md:flex justify-center w-full items-center min-h-screen text-white">
-      <div className="relative w-[60vw] h-[95vh] border flex flex-col border-gray-500 rounded-2xl p-4 bg-gray-600/20">
+      <div className="relative w-[60vw] h-[95vh] border flex flex-col border-[#454446] rounded-[0.7vw] p-4 ">
         <h1 className="text-xl font-bold mb-4">Court Ticket Map</h1>
 
         {/* Stadium Layout */}

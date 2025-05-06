@@ -30,7 +30,6 @@ const Sidebar = () => {
   const [active, setActive] = useState(false);
   const path = usePathname();
 
-
   // Handle click event to toggle sidebar
   const handleClick = () => {
     setActive(!active);
@@ -66,35 +65,39 @@ const Sidebar = () => {
 
         {/* Links */}
         <div className="links   w-full  flex  items-center flex-col gap-4 text-lg">
-          <div className='flex  justify-center w-full relative'>
-          <div
-            className={`  ${
-              active
-                ? "w-20 border-b py-1.5 border-gray-600 flex items-center gap-1"
-                : "py-1.5 border-b border-gray-600"
-            }`}
-          >
-            <Link
-              className={`${active ? "flex items-center gap-2" : ""}`}
-              href="/ads"
-            >
-              <Image
-                src={path === "/ads" ? activeicon1 : icon1}
-                alt="icon1"
-                className="z-10 md:w-[1.5vw] md:h-[3.5vh]"
-              />
-              {active && (
-                <p className="capitalize font-light text-[12px]">ads</p>
-              )}
-            </Link>
+          <div className="flex  justify-center w-full relative">
             <div
-              className={`absolute  right-0 w-[40px] xl:w-[3vw] h-[14vh] -z-10 flex ${
-                path === "/ads" ? "   -top-7 2xl:-top-9  " : "hidden"
+              className={`  ${
+                active
+                  ? "w-20 border-b py-1.5 border-gray-600 flex items-center gap-1"
+                  : "py-1.5 border-b border-gray-600"
               }`}
             >
-              <Image src={navActiveBg} alt="navbg" className=" " />
+              <Link
+                className={`${active ? "flex items-center gap-2" : ""}`}
+                href="/ads"
+              >
+                <Image
+                  src={path === "/ads" ? activeicon1 : icon1}
+                  alt="icon1"
+                  className="z-10 md:w-[1.5vw] md:h-[3.5vh]"
+                />
+                {active && (
+                  <p className="capitalize font-light text-[12px]">ads</p>
+                )}
+              </Link>
+              <div
+                className={`absolute  right-0 w-[40px] xl:w-[3vw] h-[14vh] -z-10 flex ${
+                  path === "/ads" ? "   -top-7 2xl:-top-9  " : "hidden"
+                }`}
+              >
+                {!active ? (
+                  <Image src={navActiveBg} alt="navbg" className=" " />
+                ) : (
+                  ""
+                )}
+              </div>
             </div>
-          </div>
           </div>
           {/* Posts Link */}
           <div className="relative w-full flex justify-center">
@@ -118,15 +121,19 @@ const Sidebar = () => {
                   <p className="capitalize font-light text-[12px]">Posts</p>
                 )}
               </Link>
-              <Image
-                src={union}
-                alt="union"
-                className={`-z-2 ${
-                  path === "/posts"
-                    ? "w-[50px] h-fit  -top-9  absolute right-0  "
-                    : "hidden"
-                }`}
-              />
+              {!active ? (
+                <Image
+                  src={union}
+                  alt="union"
+                  className={`-z-2 ${
+                    path === "/posts"
+                      ? "w-[50px] h-fit  -top-9  absolute right-0  "
+                      : "hidden"
+                  }`}
+                />
+              ) : (
+                ""
+              )}
             </div>
           </div>
           {/* Event Link */}
@@ -151,15 +158,19 @@ const Sidebar = () => {
                   <p className="capitalize font-light text-[12px]">Event</p>
                 )}
               </Link>
-              <Image
-                src={union}
-                alt="union"
-                className={`-z-2 ${
-                  path === "/event"
-                    ? "w-[50px] h-fit  -top-9  absolute right-0  "
-                    : "hidden"
-                }`}
-              />
+              {!active ? (
+                <Image
+                  src={union}
+                  alt="union"
+                  className={`-z-2 ${
+                    path === "/event"
+                      ? "w-[50px] h-fit  -top-9  absolute right-0  "
+                      : "hidden"
+                  }`}
+                />
+              ) : (
+                ""
+              )}
             </div>
           </div>
           {/* Court Link */}
@@ -185,16 +196,20 @@ const Sidebar = () => {
                   <p className="capitalize font-light text-[12px]">Court</p>
                 )}
               </Link>
-              <Image
-                loading="lazy"
-                src={union}
-                alt="nav icon"
-                className={`-z-2 ${
-                  path === "/court"
-                    ? "w-[50px] h-fit  -top-9  absolute right-0  "
-                    : "hidden"
-                }`}
-              />
+              {!active ? (
+                <Image
+                  loading="lazy"
+                  src={union}
+                  alt="nav icon"
+                  className={`-z-2 ${
+                    path === "/court"
+                      ? "w-[50px] h-fit  -top-9  absolute right-0  "
+                      : "hidden"
+                  }`}
+                />
+              ) : (
+                ""
+              )}
             </div>
           </div>
           {/* Coaches Link */}
@@ -219,15 +234,19 @@ const Sidebar = () => {
                   <p className="capitalize font-light text-[12px]">Coaches</p>
                 )}
               </Link>
-              <Image
-                src={union}
-                alt="union"
-                className={`-z-2 ${
-                  path === "/coaches"
-                    ? "w-[50px] h-fit  -top-9  absolute right-0  "
-                    : "hidden"
-                }`}
-              />
+              {!active ? (
+                <Image
+                  src={union}
+                  alt="union"
+                  className={`-z-2 ${
+                    path === "/coaches"
+                      ? "w-[50px] h-fit  -top-9  absolute right-0  "
+                      : "hidden"
+                  }`}
+                />
+              ) : (
+                ""
+              )}
             </div>
           </div>
           {/* courses Detail Link */}
@@ -252,15 +271,19 @@ const Sidebar = () => {
                   <p className="capitalize font-light text-[12px]">courses</p>
                 )}
               </Link>
-              <Image
-                src={union}
-                alt="union"
-                className={`-z-2 ${
-                  path === "/Ticketsdetail"
-                    ? "w-[50px] h-fit  -top-9  absolute right-0  "
-                    : "hidden"
-                }`}
-              />
+              {!active ? (
+                <Image
+                  src={union}
+                  alt="union"
+                  className={`-z-2 ${
+                    path === "/Ticketsdetail"
+                      ? "w-[50px] h-fit  -top-9  absolute right-0  "
+                      : "hidden"
+                  }`}
+                />
+              ) : (
+                ""
+              )}
             </div>
           </div>
           {/* dashboard Link */}
@@ -283,15 +306,19 @@ const Sidebar = () => {
                   <p className="capitalize font-light text-[12px]">Tickets</p>
                 )}
               </Link>
-              <Image
-                src={union}
-                alt="union"
-                className={` ${
-                  path === "/"
-                    ? "w-[50px] h-fit  -top-9  absolute right-0  "
-                    : "hidden"
-                }`}
-              />
+              {!active ? (
+                <Image
+                  src={union}
+                  alt="union"
+                  className={` ${
+                    path === "/"
+                      ? "w-[50px] h-fit  -top-9  absolute right-0  "
+                      : "hidden"
+                  }`}
+                />
+              ) : (
+                ""
+              )}
               {/* <Image className=' w-fit h-fit  ' src={union} alt='union'/> */}
             </div>
           </div>

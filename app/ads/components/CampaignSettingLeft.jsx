@@ -1,7 +1,7 @@
 import { poppins } from "@/app/components/Font";
 import React from "react";
 
-const CompaignSettingLeft = () => {
+const CompaignSettingLeft = ({values}) => {
   return (
     <div className="w-full">
       {/* compaign title container  */}
@@ -13,9 +13,9 @@ const CompaignSettingLeft = () => {
         </h1>
         {/* title  */}
         <h1
-          className={`${poppins.className} font-[600] text-[1.4vw] uppercase`}
+          className={`${poppins.className} font-[600] text-lg  md:text-[1.2vw] uppercase`}
         >
-          A
+          {values.compaignTitle}
         </h1>
       </div>
       <div className="flex flex-col gap-4 py-4 border-b border-[#383839]">
@@ -23,18 +23,18 @@ const CompaignSettingLeft = () => {
         <div className={`flex justify-between w-full capitalize`}>
           <h1 className={`text-sm md:text-[0.9vw]`}>type</h1>
           <h1
-            className={`${poppins.className} font-[900] text-[1.2vw] uppercase`}
+            className={`${poppins.className} font-[900] text-sm  md:text-[1.2vw] uppercase`}
           >
-            courts
+            {values.dropdown}
           </h1>
         </div>
         {/* support type  */}
         <div className={`flex justify-between w-full capitalize`}>
           <h1 className={`text-sm md:text-[0.9vw]`}> sport type</h1>
           <h1
-            className={`${poppins.className} font-[900] text-[1.2vw] uppercase`}
+            className={`${poppins.className} font-[900] text-sm  md:text-[1.2vw] uppercase`}
           >
-            Paintball
+            {values.gameCategory}
           </h1>
         </div>
       </div>

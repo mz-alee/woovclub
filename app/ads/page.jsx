@@ -4,15 +4,15 @@ import Link from "next/link";
 import TicketRavenue from '../components/TicketRavenue';
 import TotalTickets from '../components/TotalTickets';
 import TicketsStatusTable from '../components/TicketsStatusTable';
-import { poppins } from '../components/Font';
+import { poppins } from '../components/Font';                             
 import Impression from '../components/Impression';
 const Compaign = () => {
-  return (
+  return (   
     <div className="  w-full  flex flex-col   items-center justify-between   gap-[2.5vh]  py-[2vh] ">
-      <div className="row1  text-white min-h-[40vh] w-full    flex flex-col gap-5 lg:flex-row items-center   ">
+      <div className="row1  text-white min-h-[40vh] w-full flex flex-col gap-5 lg:flex-row items-center   ">
         <div className="details  px-4 flex flex-col gap-2   items-center lg:items-start  w-full lg:w-[50%] lg:h-[40vh] ">
           <h1
-            className={`${poppins.className}  shadow-text text-2xl mb-4  w-[350px] 2xl:w-[30vw] italic mt-2 font-[900] md:text-[5vw] lg:text-[4.3vw]  lg:text-base/16  uppercase `}
+            className={`${poppins.className}    shadow-text text-2xl mb-4  w-[300px] md:w-[350px] 2xl:w-[30vw] italic mt-2 font-[900] md:text-[5vw] lg:text-[4.3vw]  lg:text-base/16  uppercase `}
           >
             manage your ads
           </h1>

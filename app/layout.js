@@ -1,7 +1,9 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import Sidebar from './components/Sidebar';
-import Navbar from './components/Navbar';
+import Sidebar from "./components/Sidebar";
+import Navbar from "./components/Navbar";
+import QueryProvider from "./queryProvider";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,21 +22,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <div className=" bg-[#131313] flex h-screen  ">
-          <div className="h-screen  fixed flex items-center px-1">
-            <Sidebar/>
-          </div>
-          <div className=" scrollbar-hide w-full overflow-y-scroll sm:pl-[8vw]  md:pl-[7vw] px-[4vw] md:pr-[2.5vw]   ">
-            <Navbar/>
-            <div className='content-area '>
-            {children}
+      <QueryProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <div className=" bg-[#131313] flex h-screen  ">
+            <div className="h-screen  z-20 fixed flex items-center px-1">
+              <Sidebar />
+            </div>
+            <div className=" scrollbar-hide w-full overflow-y-scroll sm:pl-[8vw]  md:pl-[7vw] px-[4vw] md:pr-[2.5vw]   ">
+              <Navbar />
+              <div className="content-area ">{children}</div>
             </div>
           </div>
-        </div>
-      </body>
+        </body>
+      </QueryProvider>
     </html>
   );
 }

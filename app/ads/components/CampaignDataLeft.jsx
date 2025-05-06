@@ -11,7 +11,7 @@ const CompaignDataLeft = () => {
     <div>
       <div>
         <div
-          className="h-[380px] p-2 w-[250px] bg-cover  flex flex-col justify-between"
+          className="h-[380px] p-2 w-[250px]  bg-cover  flex flex-col justify-between"
           style={{ backgroundImage: "url('/cardCutFromLeftTopImage.png')" }}
         >
           <div className=" ml-8  py-2">

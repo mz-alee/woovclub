@@ -47,7 +47,7 @@ const MobileTicketMap = ({ data, categoryColors }) => {
   return (
     <div className="md:hidden w-full ">
       <div className="flex justify-center w-full items-center min-h-screen text-white">
-        <div className="relative w-[100%] min-h-[80vh] border flex flex-col  border-gray-500 rounded-2xl p-4 bg-gray-600/20">
+        <div className="relative w-[100%] min-h-[80vh] border flex flex-col  border-[#454446] rounded-xl p-4 ">
           <h1 className="text-xl font-bold mb-4">Court Ticket Map</h1>
 
           {/* Stadium Layout */}
@@ -56,7 +56,7 @@ const MobileTicketMap = ({ data, categoryColors }) => {
             <h1 className={`${poppins.className} italic font-light text-gray-300 text-sm`}>
               Top Tickets
             </h1>
-            <div className="cutrow bg-gray-500/30 w-full flex items-center h-[12vh] py-4 md:h-[15vh] px-4 ">
+            <div className="cutrow bg-gray-500/10 w-full flex items-center h-[12vh] py-4 md:h-[15vh] px-4 ">
               <div className="w-full flex justify-center  flex-wrap gap-1">
                 {topItems.length > 0 &&
                   topItems.map((seat, index) => (
@@ -94,7 +94,7 @@ const MobileTicketMap = ({ data, categoryColors }) => {
             <h1 className={`${poppins.className} italic font-light text-gray-300 text-sm`}>
               left Tickets
             </h1>
-            <div className="cutrow bg-gray-500/30 w-full flex items-center h-[12vh] py-4 md:h-[15vh] px-4 ">
+            <div className="cutrow bg-gray-500/10 w-full flex items-center h-[12vh] py-4 md:h-[15vh] px-4 ">
               <div className="w-full flex justify-center flex-wrap gap-1">
                 {leftItems.length > 0 &&
                   leftItems.map((seat, index) => (
